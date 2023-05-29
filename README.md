@@ -125,7 +125,7 @@ A API REST para o aplicativo de exemplo é descrita abaixo.
 
 ### Request
 
-`DELETE /tasks/:id/complete`
+`DELETE /tasks/:id`
 
     curl --request DELETE \
       --url http://localhost:3333/tasks/02729739-8b1a-4cb7-8365-2a52c1dfc024
