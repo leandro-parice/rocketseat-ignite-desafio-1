@@ -103,7 +103,7 @@ export const routes = [
       const isTaskCompleted = !!task.completed_at;
       const completed_at = isTaskCompleted ? null : new Date();
 
-      database.update("tasks", id, { completed_at });
+      database.update("tasks", id, { completed_at, updated_at: new Date() });
 
       return res.writeHead(204).end();
     },
