@@ -76,7 +76,7 @@ export const routes = [
       const [task] = database.select("tasks", { id });
 
       if (!task) {
-        return res.writeHead(404).end();
+        return res.writeHead(404).end(JSON.stringify({ message: "task not found" }));
       }
 
       database.update("tasks", id, {
@@ -97,7 +97,7 @@ export const routes = [
       const [task] = database.select("tasks", { id });
 
       if (!task) {
-        return res.writeHead(404).end();
+        return res.writeHead(404).end(JSON.stringify({ message: "task not found" }));
       }
 
       const isTaskCompleted = !!task.completed_at;
@@ -117,7 +117,7 @@ export const routes = [
       const [task] = database.select("tasks", { id });
 
       if (!task) {
-        return res.writeHead(404).end();
+        return res.writeHead(404).end(JSON.stringify({ message: "task not found" }));
       }
 
       database.delete("tasks", id);

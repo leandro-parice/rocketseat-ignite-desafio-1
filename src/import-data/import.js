@@ -1,5 +1,5 @@
-import { parse } from 'csv-parse';
-import fs from 'node:fs';
+import { parse } from "csv-parse";
+import fs from "node:fs";
 
 const csvPath = new URL("./data.csv", import.meta.url);
 
@@ -26,6 +26,8 @@ async function run() {
         title,
         description,
       }),
+    }).then(() => {
+      console.log("linha importada!");
     });
   }
 }

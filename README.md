@@ -24,6 +24,9 @@ A API também contém rota para marcar a tarefa com completa e foi desenvolvido 
 
     npm run dev
 
+### Importar CSV
+    npm run import
+
 # REST API
 
 A API REST para o aplicativo de exemplo é descrita abaixo.
